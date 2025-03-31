@@ -1,0 +1,41 @@
+// Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// Variables
+$font-family-base: 'Open Sans', sans-serif;
+$font-size-base: 1rem;
+
+// Reset
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Base styles
+html {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    color: $color-text;
+    background-color: $color-background;
+}
+
+// Layout components will be imported here
+// @import 'layout/header';
+// @import 'layout/footer';
+// @import 'layout/grid';
+
+// Components will be imported here
+// @import 'components/buttons';
+// @import 'components/carousel';
+// @import 'components/forms';
+// @import 'components/tooltips';
+// @import 'components/chart'; 
