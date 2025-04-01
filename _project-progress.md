@@ -29,8 +29,8 @@
   - [x] Slide indicators
   - [x] Different background images for slides
   - [x] Animation effects (fade, slide, zoom)
-- [ ] Announcement banner
-  - [ ] Orange notification bar with timer/date
+- [x] Announcement banner
+  - [x] Orange notification bar with timer/date
 - [ ] About section ("Co jsme zač")
   - [ ] Heading
   - [ ] Building image
