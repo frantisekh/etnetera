@@ -1,0 +1,138 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+    position: relative;
+    min-height: 600px;
+    background-image: url('../images/hero-bg@2x.jpg');
+    background-size: cover;
+    background-position: center;
+    color: $color-black;
+    
+    // Dark overlay with desaturation and contrast adjustment
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: grayscale(100%) contrast(50%) brightness(1.2);
+    }
+    
+    // Add flex positioning to the hero element to center the container
+    display: flex;
+    align-items: center;
+    
+    &__container {
+        @include container;
+        position: relative;
+        z-index: 1;
+        width: 1040px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-width: calc(100vw - 200px);
+
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+    
+    &__text-container {
+        width: auto; // Left column width
+        flex-grow: 1;
+        
+        @media (max-width: #{$breakpoint-tablet - 1px}) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    
+    &__title {
+        @include heading-1;
+        font-size: 3rem;
+        line-height: 1.2;
+        font-weight: 400;
+        padding-bottom: 36px;
+        
+        @include desktop {
+            padding-bottom: 72px;
+        }
+    }
+    
+    &__text {
+        font-size: 1.125rem;
+        line-height: 1.4;
+        opacity: 0.9;
+        padding-bottom: 36px;
+        
+        @include desktop {
+            padding-bottom: 72px;
+        }
+    }
+    
+    &__cta-container {
+        display: flex;
+        align-items: flex-end;
+        
+    }
+    
+    &__cta {
+        display: block;
+        width: fit-content;
+        padding: 0.625rem 2rem;
+        background-color: $color-white;
+        border: 1px solid $color-secondary;
+        color: $color-secondary;
+        text-decoration: none;
+        font-weight: 400;
+        transition: all 0.3s ease;
+        border-radius: 100px;
+        width: 235px;
+        text-align: center;
+        
+        &:hover {
+            border-color: $color-secondary;
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+    
+    &__nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 2;
+        
+        &--prev {
+            left: 2rem;
+        }
+        
+        &--next {
+            right: 2rem;
+        }
+    }
+    
+    &__nav-icon {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-top: 3px solid $color-black;
+        border-right: 3px solid $color-black;
+        
+        .hero__nav--prev & {
+            transform: rotate(-135deg);
+        }
+        
+        .hero__nav--next & {
+            transform: rotate(45deg);
+        }
+    }
+} 

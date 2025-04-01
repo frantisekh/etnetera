@@ -16,6 +16,34 @@
 
 ## 3. Component Implementation
 - [ ] Header and navigation
+  - [x] Desktop version
+  - [x] Mobile version
+- [x] Hero section
+  - [x] Background image with overlay
+  - [x] Main heading
+  - [x] Descriptive paragraph
+  - [x] CTA button ("Více o nás")
+  - [x] Left/right navigation arrows
+- [ ] Carousel/Slider functionality
+- [ ] Announcement banner
+  - [ ] Orange notification bar with timer/date
+- [ ] About section ("Co jsme zač")
+  - [ ] Heading
+  - [ ] Building image
+  - [ ] Descriptive paragraphs with highlighted text
+  - [ ] "Více" button
+- [ ] Company attendance graph
+  - [ ] Chart visualization with time intervals
+  - [ ] Color legend
+- [ ] Job requirements section ("Chceš být naším partákem?")
+  - [ ] Heading
+  - [ ] Checkmark list with tech skills
+- [ ] Benefits section ("Co za to dostaneš?")
+  - [ ] Heading 
+  - [ ] Numbered list with benefits
+- [ ] Three column info section
+  - [ ] "Sdílení vědomostí" column
+  - [ ] "O lidi se staráme" column
   - [ ] "Jaké u nás dostaneš benefity" column
 - [ ] Newsletter subscription form
   - [ ] Email input field
