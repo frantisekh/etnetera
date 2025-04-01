@@ -1,0 +1,77 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.benefits {
+    padding: 3rem 0;
+    background-color: $color-background-alt;
+
+    &__container {
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 0 1rem;
+
+        @include tablet {
+            padding: 0 2rem;
+        }
+    }
+
+    &__title {
+        font-size: $font-size-h2;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: $color-text;
+    }
+
+    &__content {
+        margin-top: 1.5rem;
+    }
+
+    &__subtitle {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: $color-text;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        counter-reset: benefits-counter;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    &__text {
+        flex: 1;
+        
+        p {
+            margin: 0;
+            line-height: 1.6;
+            color: $color-text;
+        }
+    }
+
+    // Responsive styles
+    @include desktop-down {
+        padding: 2rem 0;
+
+        &__title {
+            font-size: 1.5rem;
+        }
+
+        &__subtitle {
+            font-size: 1.1rem;
+        }
+
+        &__number {
+            min-width: 1.8rem;
+            height: 1.8rem;
+            font-size: 1rem;
+        }
+    }
+} 

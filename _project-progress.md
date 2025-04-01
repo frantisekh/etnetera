@@ -41,12 +41,15 @@
   - [x] Color legend
   - [x] HTML structure added
   - [x] CSS styling
-- [ ] Job requirements section ("Chceš být naším partákem?")
-  - [ ] Heading
-  - [ ] Checkmark list with tech skills
-- [ ] Benefits section ("Co za to dostaneš?")
-  - [ ] Heading 
-  - [ ] Numbered list with benefits
+- [x] Job requirements section ("Chceš být naším partákem?")
+  - [x] Heading
+  - [x] Checkmark list with tech skills
+  - [x] Custom bullet points with checkmark.png
+- [x] Benefits section ("Co za to dostaneš?")
+  - [x] Heading 
+  - [x] Numbered list with benefits
+  - [x] Custom numbered bullets with orange circles
+- [x] Two-column layout for job requirements and benefits
 - [ ] Three column info section
   - [ ] "Sdílení vědomostí" column
   - [ ] "O lidi se staráme" column
