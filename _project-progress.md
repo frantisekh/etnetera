@@ -31,11 +31,11 @@
   - [x] Animation effects (fade, slide, zoom)
 - [x] Announcement banner
   - [x] Orange notification bar with timer/date
-- [ ] About section ("Co jsme zač")
-  - [ ] Heading
-  - [ ] Building image
-  - [ ] Descriptive paragraphs with highlighted text
-  - [ ] "Více" button
+- [x] About section ("Co jsme zač")
+  - [x] Heading
+  - [x] Building image
+  - [x] Descriptive paragraphs with highlighted text
+  - [x] "Více" button
 - [ ] Company attendance graph
   - [ ] Chart visualization with time intervals
   - [ ] Color legend

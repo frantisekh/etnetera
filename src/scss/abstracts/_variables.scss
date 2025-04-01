@@ -6,7 +6,7 @@ $color-text: #333333;           // Základní barva textu
 $color-text-light: #666666;     // Světlejší text
 $color-background: #FFFFFF;      // Pozadí
 $color-background-alt: #F5F5F5;  // Alternativní pozadí
-$color-white: #FFFFFF;  // Alternativní pozadí           // Oranžová barva pro oznámení
+$color-white: $color-background;  // Alternativní pozadí           // Oranžová barva pro oznámení
 
 // Typography
 $font-family-base: 'Open Sans', sans-serif;

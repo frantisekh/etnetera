@@ -4,6 +4,8 @@
 @use 'components/header';
 @use 'components/hero';
 @use 'components/announcement';
+@use 'components/about';
+@use 'components/button';
 // @use 'layout/header';
 // @use 'layout/footer';
 // @use 'layout/grid';
@@ -12,6 +14,7 @@
 // @use 'components/forms';
 // @use 'components/tooltips';
 // @use 'components/chart';
+@use 'sass:color';
 
 // Variables
 $font-family-base: 'Open Sans', sans-serif;
@@ -45,3 +48,14 @@ body {
 
 // Layout components imported at the top
 // Components imported at the top 
+
+a {
+  color: $color-secondary;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-secondary;
+    text-decoration: underline;
+    color: color.adjust($color-secondary, $lightness: -15%);
+  }
+} 
