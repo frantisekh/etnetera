@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+    padding: 2rem 0;
+    background-color: $color-background;
+    border-top: 1px solid rgba($color-text-light, 0.1);
+    position: relative;
+
+    &__container {
+        @include container;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        
+        @media (min-width: $breakpoint-tablet) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__copyright {
+        font-size: 0.9rem;
+        color: $color-text-light;
+    }
+
+    &__group {
+        font-size: 0.9rem;
+        color: $color-text-light;
+    }
+
+    &__link {
+        color: $color-secondary;
+        font-weight: 600;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba($color-black, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    z-index: 100;
+    
+    &:hover {
+        transform: scale(1.05);
+        background-color: darken($color-secondary, 5%);
+    }
+    
+    &__icon {
+        position: relative;
+        
+        &::before {
+            content: '';
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+            background-image: url('../images/chat-icon.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            filter: brightness(0) invert(1); // Make the icon white
+        }
+    }
+} 

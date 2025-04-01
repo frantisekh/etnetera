@@ -50,18 +50,18 @@
   - [x] Numbered list with benefits
   - [x] Custom numbered bullets with orange circles
 - [x] Two-column layout for job requirements and benefits
-- [ ] Three column info section
-  - [ ] "Sdílení vědomostí" column
-  - [ ] "O lidi se staráme" column
-  - [ ] "Jaké u nás dostaneš benefity" column
-- [ ] Newsletter subscription form
-  - [ ] Email input field
-  - [ ] Submit button
-  - [ ] Privacy policy text
-- [ ] Footer
-  - [ ] Copyright information
-  - [ ] Company group reference
-  - [ ] Chat button (red circle with icon)
+- [x] Three column info section
+  - [x] "Sdílení vědomostí" column
+  - [x] "O lidi se staráme" column
+  - [x] "Jaké u nás dostaneš benefity" column
+- [x] Newsletter subscription form
+  - [x] Email input field
+  - [x] Submit button
+  - [x] Privacy policy text
+- [x] Footer
+  - [x] Copyright information
+  - [x] Company group reference
+  - [x] Chat button (red circle with icon)
 
 ## 4. JavaScript Functionality
 - [x] Carousel implementation
