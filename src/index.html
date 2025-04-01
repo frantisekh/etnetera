@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <!-- Using the etnetera logo from images directory -->
+                <img src="images/etnetera-logo.png" alt="Etnetera logo">
+            </div>
+            
+            <!-- Mobile menu button - only visible on mobile -->
+            <button class="header__mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">DOMŮ</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--active">KDO JSME</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">CO DĚLÁME</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">REFERENCE</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">PRÁCE U NÁS (4)</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link">KONTAKT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <script src="js/main.js"></script>
 </body>
 </html> 

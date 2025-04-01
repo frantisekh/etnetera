@@ -1,0 +1,174 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// SCSS for header component will go here 
+
+.header {
+    width: 100%;
+    background-color: $color-background;
+    position: relative;
+    z-index: $z-index-header;
+    
+    // Container to center content
+    &__container {
+        @include flex-between;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+        @include desktop {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+    }
+    
+    // Logo styles
+    &__logo {
+        img {
+            max-height: 48px;
+            width: auto;
+        }
+    }
+    
+    // Mobile menu toggle button
+    &__mobile-toggle {
+        display: block;
+        background: none;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        
+        span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin-bottom: 5px;
+            position: relative;
+            background-color: $color-secondary;
+            border-radius: 3px;
+            transform-origin: center;
+            transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+        // Animated hamburger to X
+        &.is-active {
+            span {
+                &:nth-child(1) {
+                    transform: translateY(8px) rotate(45deg);
+                }
+                
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                
+                &:nth-child(3) {
+                    transform: translateY(-8px) rotate(-45deg);
+                }
+            }
+        }
+        
+        @include desktop {
+            display: none; // Hide on desktop
+        }
+    }
+    
+    // Navigation styles
+    &__nav {
+        display: none; // Hide on mobile by default
+        
+        &.is-active {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba($color-background, 0.95);
+            padding-top: 80px;
+        }
+        
+        @include desktop {
+            display: block;
+            position: static;
+            padding-top: 0;
+            background-color: transparent;
+        }
+    }
+    
+    &__nav-list {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        
+        @media (max-width: #{$breakpoint-desktop - 1px}) {
+            flex-direction: column;
+            align-items: center;
+            
+            .header__nav.is-active & {
+                animation: fadeIn 0.3s ease-in-out forwards;
+            }
+        }
+    }
+    
+    &__nav-item {
+        margin-left: 2rem;
+        
+        &:first-child {
+            margin-left: 0;
+        }
+        
+        @media (max-width: #{$breakpoint-desktop - 1px}) {
+            margin: 0 0 1.5rem 0;
+            font-size: 1.25rem;
+        }
+    }
+    
+    &__nav-link {
+        color: $color-text;
+        text-decoration: none;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        position: relative;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+        
+        &:hover {
+            color: $color-secondary;
+        }
+        
+        // Active state - orange text (instead of underline)
+        &--active {
+            color: $color-secondary;
+            
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-secondary;
+            }
+        }
+    }
+    
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 

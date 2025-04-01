@@ -1,6 +1,14 @@
 // Abstracts
-@import 'abstracts/variables';
-@import 'abstracts/mixins';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+@use 'components/hero';
+// @use 'layout/footer';
+// @use 'layout/grid';
+// @use 'components/buttons';
+// @use 'components/carousel';
+// @use 'components/forms';
+// @use 'components/tooltips';
+// @use 'components/chart';
 
 // Variables
 $font-family-base: 'Open Sans', sans-serif;
@@ -26,16 +34,11 @@ body {
     font-size: $font-size-base;
     color: $color-text;
     background-color: $color-background;
+    
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
 
-// Layout components will be imported here
-// @import 'layout/header';
-// @import 'layout/footer';
-// @import 'layout/grid';
-
-// Components will be imported here
-// @import 'components/buttons';
-// @import 'components/carousel';
-// @import 'components/forms';
-// @import 'components/tooltips';
-// @import 'components/chart'; 
+// Layout components imported at the top
+// Components imported at the top 

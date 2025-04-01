@@ -6,6 +6,7 @@
 - [x] Set up build workflow (npm scripts)
 - [x] Set up SASS
 - [x] Implement BEM methodology
+- [x] Update SASS from @import to @use/@forward (fix deprecation warnings)
 
 ## 2. Design Analysis
 - [x] Identify and document color palette
@@ -15,14 +16,15 @@
 
 ## 3. Component Implementation
 - [ ] Header and navigation
-  - [ ] Desktop version
-  - [ ] Mobile version
-- [ ] Hero section
-- [ ] Carousel
-- [ ] Graph
-- [ ] Tooltip components
-- [ ] Form
+  - [ ] "Jaké u nás dostaneš benefity" column
+- [ ] Newsletter subscription form
+  - [ ] Email input field
+  - [ ] Submit button
+  - [ ] Privacy policy text
 - [ ] Footer
+  - [ ] Copyright information
+  - [ ] Company group reference
+  - [ ] Chat button (red circle with icon)
 
 ## 4. JavaScript Functionality
 - [ ] Carousel implementation
@@ -33,7 +35,7 @@
   - [ ] Responsive adjustment
 - [ ] Tooltip system
 - [ ] Form validation
-- [ ] Mobile menu
+- [x] Mobile menu
 
 ## 5. Optimization
 - [ ] Performance optimization

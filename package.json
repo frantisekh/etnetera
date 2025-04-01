@@ -8,7 +8,8 @@
     "serve": "browser-sync start --server 'dist' --files 'dist'",
     "copy:html": "cp src/index.html dist/",
     "copy:js": "cp src/js/* dist/js/",
-    "copy": "npm run copy:html && npm run copy:js",
+    "copy:images": "mkdir -p dist/images && cp -R src/images/* dist/images/",
+    "copy": "npm run copy:html && npm run copy:js && npm run copy:images",
     "start": "npm run copy && run-p sass serve",
     "build": "sass src/scss:dist/css --style=compressed && npm run copy"
   },
