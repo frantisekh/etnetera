@@ -36,9 +36,11 @@
   - [x] Building image
   - [x] Descriptive paragraphs with highlighted text
   - [x] "Více" button
-- [ ] Company attendance graph
-  - [ ] Chart visualization with time intervals
-  - [ ] Color legend
+- [x] Company attendance graph
+  - [x] Chart visualization with time intervals
+  - [x] Color legend
+  - [x] HTML structure added
+  - [x] CSS styling
 - [ ] Job requirements section ("Chceš být naším partákem?")
   - [ ] Heading
   - [ ] Checkmark list with tech skills
@@ -65,9 +67,6 @@
   - [x] Touch gestures for mobile
   - [x] Keyboard navigation support
   - [x] Autoplay vypnuto dle požadavku
-- [ ] Graph
-  - [ ] Visualization implementation
-  - [ ] Responsive adjustment
 - [ ] Tooltip system
 - [ ] Form validation
 - [x] Mobile menu

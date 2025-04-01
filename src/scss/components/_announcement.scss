@@ -14,6 +14,8 @@
         
         &:hover, &:focus {
             background-color: color.adjust($color-secondary, $lightness: -5%);
+            color: $color-white;
+            text-decoration: none;
         }
     }
     
@@ -33,19 +35,21 @@
     
     &__content {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 0.5rem;
         
         @include mobile {
-            justify-content: center;
             text-align: center;
         }
         
         @include tablet {
             justify-content: space-around;
             text-align: left;
+        }
+        @include desktop {
+            justify-content: space-between;
         }
     }
     

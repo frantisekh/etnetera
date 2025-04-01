@@ -8,6 +8,11 @@ $color-background: #FFFFFF;      // Pozadí
 $color-background-alt: #F5F5F5;  // Alternativní pozadí
 $color-white: $color-background;  // Alternativní pozadí           // Oranžová barva pro oznámení
 
+// Attendance chart colors
+$attendance-low: #F8D1B0;        // Světle oranžová - bez fronty
+$attendance-medium: #F8AD7B;     // Středně oranžová - možnost fronty
+$attendance-high: #E84E0E;       // Tmavě oranžová - pravděpodobně čekání ve frontě
+
 // Typography
 $font-family-base: 'Open Sans', sans-serif;
 $font-size-base: 1rem;

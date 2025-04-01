@@ -1,0 +1,181 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.attendance {
+    padding: 0 0 3rem;
+    background-color: $color-background-alt;
+    
+    &__container {
+        max-width: 564px;
+        margin: 0 auto;
+        padding: 0 $grid-gap;
+    }
+    
+    &__title {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: $color-text;
+    }
+    
+    &__chart {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: 1fr auto auto;
+        grid-template-areas: 
+            "ampersand bars"
+            "clock labels"
+            "dummy legend";
+        gap: 10px;
+        margin-bottom: 2rem;
+        
+        @media (max-width: 768px) {
+            grid-template-rows: 80px auto auto;
+            gap: 5px;
+            grid-template-columns: 24px 1fr;
+        }
+    }
+    
+    &__icons {
+        grid-area: icons;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-self: center;
+        margin-right: 10px;
+        
+        img {
+            max-width: 24px;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            gap: 30px;
+            margin-right: 5px;
+            
+            img {
+                max-width: 20px;
+            }
+        }
+    }
+    
+    &__chart-bars {
+        grid-area: bars;
+        display: grid;
+        grid-template-columns: repeat(29, 1fr);
+        gap: 1px;
+        height: 80px;
+        align-items: end;
+        
+    }
+    
+    &__chart-labels {
+        grid-area: labels;
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.75rem;
+        color: $color-text-light;
+        margin-top: 0.5rem;
+        
+        .attendance__time-label {
+            grid-column: span 2;
+            text-align: center;
+            transform: rotate(-90deg);
+            
+            &:first-child {
+                grid-column: 1 / span 2;
+                text-align: left;
+            }
+            
+            &:last-child {
+                grid-column: 27 / span 3;
+                text-align: right;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            font-size: 0.625rem;
+            
+            .attendance__time-label:nth-child(even) {
+                display: none;
+            }
+        }
+    }
+    
+    &__bar-container {
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    &__bar {
+        width: 100%;
+        transition: height 0.3s ease;
+        border-radius: 100px 100px 0 0;
+        
+        &--low {
+            background-color: $attendance-low;
+        }
+        
+        &--medium {
+            background-color: $attendance-medium;
+        }
+        
+        &--high {
+            background-color: $attendance-high;
+        }
+    }
+    
+    &__legend {
+        grid-area: legend;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem 2rem;
+        justify-content: flex-start;
+        margin-top: 1.5rem;
+                
+        @media (max-width: 768px) {
+            gap: 0.5rem 1rem;
+            margin-top: 1rem;
+        }
+    }
+    
+    &__legend-item {
+        display: flex;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+    
+    &__legend-color {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        
+        .attendance__legend-item--low & {
+            background-color: $attendance-low;
+        }
+        
+        .attendance__legend-item--medium & {
+            background-color: $attendance-medium;
+        }
+        
+        .attendance__legend-item--high & {
+            background-color: $attendance-high;
+        }
+    }
+
+    &__icon--ampersand {
+        grid-area: ampersand;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    &__icon--clock {
+        grid-area: clock;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+} 

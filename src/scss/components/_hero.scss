@@ -3,15 +3,11 @@
 
 .hero {
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
     background-size: cover;
     background-position: center;
     color: $color-black;
     overflow: hidden;
-    
-    @include tablet {
-        min-height: 500px;
-    }
     
     @include desktop {
         height: 600px;
@@ -124,7 +120,6 @@
     }
     
     &__container {
-        @include container;
         position: relative;
         z-index: 1;
         width: 1040px;
@@ -153,7 +148,6 @@
     &__title {
         @include heading-1;
         font-size: 2rem;
-        line-height: 1.2;
         font-weight: 400;
         padding-bottom: 36px;
         
@@ -221,7 +215,7 @@
         }
         
         &--prev {
-            left: 1rem;
+            left: 0.5rem;
 
             @include desktop {
                 left: 2rem;
@@ -229,7 +223,7 @@
         }
         
         &--next {
-            right: 1rem;
+            right: 0.5rem;
 
             @include desktop {
                 right: 2rem;
