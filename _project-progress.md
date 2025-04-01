@@ -24,7 +24,11 @@
   - [x] Descriptive paragraph
   - [x] CTA button ("Více o nás")
   - [x] Left/right navigation arrows
-- [ ] Carousel/Slider functionality
+- [x] Carousel/Slider functionality
+  - [x] Basic functionality
+  - [x] Slide indicators
+  - [x] Different background images for slides
+  - [x] Animation effects (fade, slide, zoom)
 - [ ] Announcement banner
   - [ ] Orange notification bar with timer/date
 - [ ] About section ("Co jsme zač")
@@ -55,9 +59,12 @@
   - [ ] Chat button (red circle with icon)
 
 ## 4. JavaScript Functionality
-- [ ] Carousel implementation
-  - [ ] Basic functionality
-  - [ ] Responsive behavior
+- [x] Carousel implementation
+  - [x] Basic functionality
+  - [x] Responsive behavior
+  - [x] Touch gestures for mobile
+  - [x] Keyboard navigation support
+  - [x] Autoplay vypnuto dle požadavku
 - [ ] Graph
   - [ ] Visualization implementation
   - [ ] Responsive adjustment

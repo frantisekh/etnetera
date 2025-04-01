@@ -35,13 +35,44 @@
     </header>
 
     <section class="hero">
-        <div class="hero__container">
-            <div class="hero__text-container">
-                <h1 class="hero__title">Přidej se v Etneteře mezi kodéry</h1>
-                <p class="hero__text">Čeká tu tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s&nbsp;tebou během práce pokecáme, zajdeme na oběd nebo poradíme s&nbsp;problémem.</p>
+        <div class="hero__slides">
+            <!-- Slide 1 -->
+            <div class="hero__slide hero__slide--active">
+                <div class="hero__container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__title">Přidej se v Etneteře mezi kodéry</h1>
+                        <p class="hero__text">Čeká tu tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s&nbsp;tebou během práce pokecáme, zajdeme na oběd nebo poradíme s&nbsp;problémem.</p>
+                    </div>
+                    <div class="hero__cta-container">
+                        <a href="#" class="hero__cta button">Více o nás</a>
+                    </div>
+                </div>
             </div>
-            <div class="hero__cta-container">
-                <a href="#" class="hero__cta button">Více o nás</a>
+            
+            <!-- Slide 2 -->
+            <div class="hero__slide">
+                <div class="hero__container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__title">Profesionální vývojáři s vášní pro web</h1>
+                        <p class="hero__text">Naši vývojáři pracují s nejmodernějšími technologiemi a postupy. Dbáme na kvalitu kódu, čistou architekturu a používáme agilní metodiky vývoje.</p>
+                    </div>
+                    <div class="hero__cta-container">
+                        <a href="#" class="hero__cta button">Naše projekty</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="hero__slide">
+                <div class="hero__container">
+                    <div class="hero__text-container">
+                        <h1 class="hero__title">Staň se součástí našeho týmu</h1>
+                        <p class="hero__text">Hledáme talentované vývojáře, kteří chtějí růst. Nabízíme přátelské prostředí, zajímavé projekty a prostor pro seberealizaci.</p>
+                    </div>
+                    <div class="hero__cta-container">
+                        <a href="#" class="hero__cta button">Volné pozice</a>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -51,8 +82,15 @@
         <button class="hero__nav hero__nav--next" aria-label="Další slide">
             <span class="hero__nav-icon"></span>
         </button>
+        
+        <!-- Slide indicators -->
+        <div class="hero__indicators">
+            <button class="hero__indicator hero__indicator--active" aria-label="Slide 1"></button>
+            <button class="hero__indicator" aria-label="Slide 2"></button>
+            <button class="hero__indicator" aria-label="Slide 3"></button>
+        </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html> 

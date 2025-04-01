@@ -1,4 +1,6 @@
 // Main JavaScript file
+import { heroCarousel } from './carousel.js';
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOM loaded');
     
@@ -22,4 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.toggle('no-scroll');
         });
     }
+    
+    // Initialize hero carousel
+    heroCarousel.init();
 }); 
