@@ -52,9 +52,10 @@ export const heroCarousel = {
      * @param {number} index - The index of the slide to go to
      */
     goToSlide(index) {
-        // Remove active class from current slide and indicator
+        // Remove active class and set aria-hidden on current slide
         if (this.slides[this.currentIndex]) {
             this.slides[this.currentIndex].classList.remove('hero__slide--active');
+            this.slides[this.currentIndex].setAttribute('aria-hidden', 'true');
         }
         if (this.indicators[this.currentIndex]) {
             this.indicators[this.currentIndex].classList.remove('hero__indicator--active');
@@ -67,9 +68,10 @@ export const heroCarousel = {
         // Update current index
         this.currentIndex = index;
         
-        // Add active class to new slide and indicator
+        // Add active class and remove aria-hidden from new slide
         if (this.slides[this.currentIndex]) {
             this.slides[this.currentIndex].classList.add('hero__slide--active');
+            this.slides[this.currentIndex].removeAttribute('aria-hidden');
         }
         if (this.indicators[this.currentIndex]) {
             this.indicators[this.currentIndex].classList.add('hero__indicator--active');

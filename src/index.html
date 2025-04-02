@@ -58,7 +58,7 @@
         <section class="hero" aria-label="Hlavní prezentace">
             <div class="hero__slides" role="region" aria-label="Prezentační slider">
                 <!-- Slide 1 -->
-                <div class="hero__slide hero__slide--active" role="tabpanel" aria-labelledby="slide-heading-1">
+                <div id="hero-slide-1" class="hero__slide hero__slide--active" role="tabpanel" aria-labelledby="slide-heading-1">
                     <div class="hero__container">
                         <div class="hero__text-container">
                             <h1 id="slide-heading-1" class="hero__title">Přidej se v&nbsp;Etneteře mezi kodéry</h1>
@@ -71,10 +71,10 @@
                 </div>
                 
                 <!-- Slide 2 -->
-                <div class="hero__slide">
+                <div id="hero-slide-2" class="hero__slide" role="tabpanel" aria-labelledby="slide-heading-2" aria-hidden="true">
                     <div class="hero__container">
                         <div class="hero__text-container">
-                            <h1 class="hero__title">Vývojáři s&nbsp;vášní pro web</h1>
+                            <h1 id="slide-heading-2" class="hero__title">Vývojáři s&nbsp;vášní pro web</h1>
                             <p class="hero__text">Naši vývojáři pracují s nejmodernějšími technologiemi a postupy. Dbáme na kvalitu kódu, čistou architekturu a používáme agilní metodiky vývoje.</p>
                         </div>
                         <div class="hero__cta-container">
@@ -84,10 +84,10 @@
                 </div>
                 
                 <!-- Slide 3 -->
-                <div class="hero__slide">
+                <div id="hero-slide-3" class="hero__slide" role="tabpanel" aria-labelledby="slide-heading-3" aria-hidden="true">
                     <div class="hero__container">
                         <div class="hero__text-container">
-                            <h1 class="hero__title">Staň se&nbsp;součástí našeho týmu</h1>
+                            <h1 id="slide-heading-3" class="hero__title">Staň se&nbsp;součástí našeho týmu</h1>
                             <p class="hero__text">Hledáme talentované vývojáře, kteří chtějí růst. Nabízíme přátelské prostředí, zajímavé projekty a prostor pro seberealizaci.</p>
                         </div>
                         <div class="hero__cta-container">
@@ -106,9 +106,9 @@
             
             <!-- Slide indicators -->
             <div class="hero__indicators">
-                <button class="hero__indicator hero__indicator--active" aria-label="Slide 1"></button>
-                <button class="hero__indicator" aria-label="Slide 2"></button>
-                <button class="hero__indicator" aria-label="Slide 3"></button>
+                <button class="hero__indicator hero__indicator--active" aria-label="Slide 1" aria-controls="hero-slide-1"></button>
+                <button class="hero__indicator" aria-label="Slide 2" aria-controls="hero-slide-2"></button>
+                <button class="hero__indicator" aria-label="Slide 3" aria-controls="hero-slide-3"></button>
             </div>
         </section>
 
@@ -414,7 +414,7 @@
 
     <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-hidden="true">
         <div class="newsletter-popup__content">
-            <button class="newsletter-popup__close" aria-label="Zavřít"><img src="images/close.svg" alt="Zavřít" aria-hidden="true"></button>
+            <button class="newsletter-popup__close" aria-label="Zavřít"><img src="images/close.svg" aria-hidden="true"></button>
             <h2 class="newsletter-popup__title" id="newsletter-title">Dostávejte články přímo do vaší e-mailové schránky!</h2>
             <form class="newsletter-popup__form">
                 <div class="newsletter-popup__input-group">
