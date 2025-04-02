@@ -95,15 +95,15 @@
 ## 6. Optimization
 - [ ] Performance optimization
   - [ ] Image optimization
-  - [ ] Minification of CSS/JS
+  - [x] Minification of CSS/JS
   - [ ] Lazy loading
   - [ ] Cache headers configuration
   - [ ] Gzip compression
 - [ ] Accessibility testing (WCAG)
   - [ ] Color contrast check
   - [ ] Keyboard navigation
-  - [ ] Screen reader compatibility
-  - [ ] ARIA labels implementation
+  - [x] Screen reader compatibility
+  - [x] ARIA labels implementation
 - [ ] Cross-browser testing
   - [ ] Chrome
   - [ ] Firefox
