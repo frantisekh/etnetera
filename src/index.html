@@ -7,401 +7,402 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" role="banner">
         <div class="header__container">
             <div class="header__logo">
-                <a href="#"><img src="images/etnetera-logo.png" alt="Etnetera logo"></a>
+                <a href="/" aria-label="Etnetera - Domovská stránka"><img src="images/etnetera-logo.png" alt="Etnetera logo"></a>
             </div>
             
             <!-- Mobile menu button - only visible on mobile -->
             <button class="header__mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="header__mobile-toggle-line" aria-hidden="true"></span>
+                <span class="header__mobile-toggle-line" aria-hidden="true"></span>
+                <span class="header__mobile-toggle-line" aria-hidden="true"></span>
             </button>
             
-            <nav class="header__nav">
+            <nav class="header__nav" role="navigation" aria-label="Hlavní navigace">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">DOMŮ</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--active">KDO JSME</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">CO DĚLÁME</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">REFERENCE</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">PRÁCE U NÁS (4)</a></li>
-                    <li class="header__nav-item"><a href="#" class="header__nav-link">KONTAKT</a></li>
+                    <li class="header__nav-item"><a href="/" class="header__nav-link">DOMŮ</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__nav-link header__nav-link--active" aria-current="page">KDO JSME</a></li>
+                    <li class="header__nav-item"><a href="/co-delame" class="header__nav-link">CO DĚLÁME</a></li>
+                    <li class="header__nav-item"><a href="/reference" class="header__nav-link">REFERENCE</a></li>
+                    <li class="header__nav-item"><a href="/kariera" class="header__nav-link">PRÁCE U NÁS (4)</a></li>
+                    <li class="header__nav-item"><a href="/kontakt" class="header__nav-link">KONTAKT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero__slides">
-            <!-- Slide 1 -->
-            <div class="hero__slide hero__slide--active">
-                <div class="hero__container">
-                    <div class="hero__text-container">
-                        <h1 class="hero__title">Přidej se v&nbsp;Etneteře mezi kodéry</h1>
-                        <p class="hero__text">Čeká tu tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s&nbsp;tebou během práce pokecáme, zajdeme na oběd nebo poradíme s&nbsp;problémem.</p>
-                    </div>
-                    <div class="hero__cta-container">
-                        <a href="#" class="hero__cta">Více o nás</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 2 -->
-            <div class="hero__slide">
-                <div class="hero__container">
-                    <div class="hero__text-container">
-                        <h1 class="hero__title">Vývojáři s&nbsp;vášní pro web</h1>
-                        <p class="hero__text">Naši vývojáři pracují s nejmodernějšími technologiemi a postupy. Dbáme na kvalitu kódu, čistou architekturu a používáme agilní metodiky vývoje.</p>
-                    </div>
-                    <div class="hero__cta-container">
-                        <a href="#" class="hero__cta">Naše projekty</a>
+    <main role="main">
+        <section class="hero" aria-label="Hlavní prezentace">
+            <div class="hero__slides" role="region" aria-label="Prezentační slider">
+                <!-- Slide 1 -->
+                <div class="hero__slide hero__slide--active" role="tabpanel" aria-labelledby="slide-heading-1">
+                    <div class="hero__container">
+                        <div class="hero__text-container">
+                            <h1 id="slide-heading-1" class="hero__title">Přidej se v&nbsp;Etneteře mezi kodéry</h1>
+                            <p class="hero__text">Čeká tu tým mladých lidí zapálených nejen do kódování. Nejsme žádný tiše pracující tým. Rádi si s&nbsp;tebou během práce pokecáme, zajdeme na oběd nebo poradíme s&nbsp;problémem.</p>
+                        </div>
+                        <div class="hero__cta-container">
+                            <a href="/o-nas" class="hero__cta">Více o nás</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="hero__slide">
-                <div class="hero__container">
-                    <div class="hero__text-container">
-                        <h1 class="hero__title">Staň se&nbsp;součástí našeho týmu</h1>
-                        <p class="hero__text">Hledáme talentované vývojáře, kteří chtějí růst. Nabízíme přátelské prostředí, zajímavé projekty a prostor pro seberealizaci.</p>
-                    </div>
-                    <div class="hero__cta-container">
-                        <a href="#" class="hero__cta">Volné pozice</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <button class="hero__nav hero__nav--prev" aria-label="Předchozí slide">
-            <span class="hero__nav-icon"></span>
-        </button>
-        <button class="hero__nav hero__nav--next" aria-label="Další slide">
-            <span class="hero__nav-icon"></span>
-        </button>
-        
-        <!-- Slide indicators -->
-        <div class="hero__indicators">
-            <button class="hero__indicator hero__indicator--active" aria-label="Slide 1"></button>
-            <button class="hero__indicator" aria-label="Slide 2"></button>
-            <button class="hero__indicator" aria-label="Slide 3"></button>
-        </div>
-    </section>
-
-    <div class="announcement">
-        <a href="#" class="announcement__link">
-            <div class="announcement__container">
-                <div class="announcement__content">
-                    <span class="announcement__date">Před 12 dny</span>
-                    <span class="announcement__text">Jiří Štěpán z Etnetera Activate podhalil zákulisí vykutálené náborové kampaně.</span>
-                    <span class="announcement__action">Přečíst</span>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <section class="about">
-        <div class="about__container">
-            <h2 class="about__title">Co jsme zač</h2>
-            
-            <div class="about__content">
-                <div class="about__image">
-                    <img src="images/budova@2x.jpg" alt="Budova Etnetera">
-                </div>
-                <div class="about__text">
-                    <p>V roce 1997 si Martin a Václav začali chybějící zdroje v práci s reklamním piánem, že mohou zaměstnat i své přátele, kteří celí jejich znalosti a smysl pro humor. Po 20 letech úspěšného fungování je <a href="https://etnetera.cz">Etnetera</a> <span class="about__highlight">přední společností v oblasti vývoje webových portálů a aplikací</span>. Naším cílem je pro klienty na českém trhu vytvořit správné a <span class="about__highlight">dlouhodobé partnerství a hledání jedinečných řešení s přidanou hodnotou, která vás posunou vpřed.</span> Naše sebedůvěra má své zázemí zejména v týmu odborníků z řade různých projektů pro klienty, kteří jsou špičkou v oboru. Držíme slovo i termíny, dokážeme přiznat a napravit chybu. Věříme sobě i vám.</p>
-                    <p>Pracujeme v liberálním a otevřeném prostředí bez kravatě a procesních příruček. Inspirujeme se principy svobodné firmy, kde se zisky dělí transparentně, týmy si vlastní pravidla a management nemá nadstandardní benefity. Rádi společně sportujeme a podporujeme se. Kopeme za jeden tým.</p>
-                    <p>Není proto náhoda, že jsme se <span class="tooltip" data-tooltip="hustý, co?">4 roky po sobě</span> umístili na třech nejvyšších příčkách v soutěži Best Employers ČR.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="attendance">
-        <div class="attendance__container">
-            <h3 class="attendance__title">Návštěvnost firmy</h3>
-            
-            <div class="attendance__chart">
-               
-                <!-- Icons in left column -->
-                <div class="attendance__icon attendance__icon--ampersand"><img src="images/etn-logo-graf.png" alt="Ampersand"></div> 
-                <div class="attendance__icon attendance__icon--clock"><img src="images/clock.svg" alt="Clock"></div>
-            
                 
-                <div class="attendance__chart-bars">
-                    <!-- Graph bars with updated heights -->
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 35%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 25%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 75%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 85%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 70%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 45%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 50%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 50%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 65%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 75%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 85%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 70%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 55%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 45%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 30%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--high" style="height: 65%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 25%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
-                    </div>
-                    <div class="attendance__bar-container">
-                        <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
+                <!-- Slide 2 -->
+                <div class="hero__slide">
+                    <div class="hero__container">
+                        <div class="hero__text-container">
+                            <h1 class="hero__title">Vývojáři s&nbsp;vášní pro web</h1>
+                            <p class="hero__text">Naši vývojáři pracují s nejmodernějšími technologiemi a postupy. Dbáme na kvalitu kódu, čistou architekturu a používáme agilní metodiky vývoje.</p>
+                        </div>
+                        <div class="hero__cta-container">
+                            <a href="#" class="hero__cta">Naše projekty</a>
+                        </div>
                     </div>
                 </div>
-                <div class="attendance__chart-labels">
-                    <!-- Time labels in bottom right area -->
-                    <div class="attendance__time-label">8:00</div>
-                    <div class="attendance__time-label">9:00</div>
-                    <div class="attendance__time-label">10:00</div>
-                    <div class="attendance__time-label">11:00</div>
-                    <div class="attendance__time-label">12:00</div>
-                    <div class="attendance__time-label">13:00</div>
-                    <div class="attendance__time-label">14:00</div>
-                    <div class="attendance__time-label">15:00</div>
-                    <div class="attendance__time-label">16:00</div>
-                    <div class="attendance__time-label">17:00</div>
-                    <div class="attendance__time-label">18:00</div>
-                    <div class="attendance__time-label">19:00</div>
-                    <div class="attendance__time-label">20:00</div>
-                    <div class="attendance__time-label">21:00</div>
-                    <div class="attendance__time-label">22:00</div>
-                </div>
-            
-                <div class="attendance__legend">
-                    <div class="attendance__legend-item attendance__legend-item--low">
-                        <span class="attendance__legend-color"></span>
-                        <span class="attendance__legend-text">bez fronty</span>
+                
+                <!-- Slide 3 -->
+                <div class="hero__slide">
+                    <div class="hero__container">
+                        <div class="hero__text-container">
+                            <h1 class="hero__title">Staň se&nbsp;součástí našeho týmu</h1>
+                            <p class="hero__text">Hledáme talentované vývojáře, kteří chtějí růst. Nabízíme přátelské prostředí, zajímavé projekty a prostor pro seberealizaci.</p>
+                        </div>
+                        <div class="hero__cta-container">
+                            <a href="#" class="hero__cta">Volné pozice</a>
+                        </div>
                     </div>
-                    <div class="attendance__legend-item attendance__legend-item--medium">
-                        <span class="attendance__legend-color"></span>
-                        <span class="attendance__legend-text">možnost fronty</span>
-                    </div>
-                    <div class="attendance__legend-item attendance__legend-item--high">
-                        <span class="attendance__legend-color"></span>
-                        <span class="attendance__legend-text">pravděpodobné čekání ve frontě</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Job Requirements and Benefits Section (Two-column layout) -->
-    <section class="careers">
-        <div class="careers__container">
-            <!-- Left Column - Job Requirements -->
-            <div class="careers__column careers__column--requirements">
-                <h2 class="careers__title">Chceš být naším partákem?</h2>
-                <div class="careers__content">
-                    <div class="careers__subtitle">Měl(a) bys:</div>
-                    <ul class="careers__requirements-list">
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Znát HTML5, CSS3. Doslova. Tento jazyk Ti občas připadá přirozenější než čeština.</span>
-                        </li>
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Znát JavaScript.</span>
-                        </li>
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Nad pojmy ES6/7, React a Redux bys neměl bezradně krčit rameny, ale bezpečně je znát.</span>
-                        </li>
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Node.js je Tvůj dobrý kamarád, který používáš při buildování.</span>
-                        </li>
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Velkou výhodu představují dobré vztahy s dalšími JS frameworky. Tzn. pokud si tykáš třeba s Angular, Vue.js či Vanilla JS.</span>
-                        </li>
-                        <li class="careers__requirements-item">
-                            <span class="careers__requirements-text">Uvedené technologie Tě zajímají, ale nemáš s nimi moc zkušeností? Nevadí, stav se k nám na kafe.</span>
-                        </li>
-                    </ul>
                 </div>
             </div>
             
-            <!-- Right Column - Benefits -->
-            <div class="careers__column careers__column--benefits">
-                <h2 class="careers__title">Co za to dostaneš?</h2>
-                <div class="careers__content">
-                    <div class="careers__subtitle">Budeme si tě hýčkat např.:</div>
-                    <ol class="careers__benefits-list">
-                        <li class="careers__benefits-item">
-                            <div class="careers__benefits-text">
-                                <p>Komfortním pracovním prostředím, které je unikátní! Kombinací kancelářské, diskotéky, odpočinkových prostor a kavárny. U nás se strašně snadno odreagujete a nabíjené limečky takt nerosí.</p>
-                            </div>
-                        </li>
-                        <li class="careers__benefits-item">
-                            <div class="careers__benefits-text">
-                                <p>Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a další.</p>
-                            </div>
-                        </li>
-                        <li class="careers__benefits-item">
-                            <div class="careers__benefits-text">
-                                <p>Možností pořádně si oddechnout. Nejen v našich relaxačních prostorech, ale třeba na pláži v exotice. Díky 5 týdnům placené dovolené.</p>
-                            </div>
-                        </li>
-                        <li class="careers__benefits-item">
-                            <div class="careers__benefits-text">
-                                <p>Inspirativním prostředím plným zajímavých lidí, které stojí za to poznat. Organizujeme pravidelné techtunlche, kde nad lahodnou pizzou sdílíme naše nové poznatky a zkušenosti.</p>
-                            </div>
-                        </li>
-                        <li class="careers__benefits-item">
-                            <div class="careers__benefits-text">
-                                <p>A hlavně... svobodou!! Budeme rádi, pokud s námi budeš v kanceláři, ale rozumíme tomu, že někdy budeš chtít pracovat i odjinud. Zároveň chápeme, že každému z nás vyhovuje jiná pracovní doba a zařízení, na kterém pracuje. Pojďme se domluvit.</p>
-                            </div>
-                        </li>
-                    </ol>
+            <button class="hero__nav hero__nav--prev" aria-label="Předchozí slide">
+                <span class="hero__nav-icon"></span>
+            </button>
+            <button class="hero__nav hero__nav--next" aria-label="Další slide">
+                <span class="hero__nav-icon"></span>
+            </button>
+            
+            <!-- Slide indicators -->
+            <div class="hero__indicators">
+                <button class="hero__indicator hero__indicator--active" aria-label="Slide 1"></button>
+                <button class="hero__indicator" aria-label="Slide 2"></button>
+                <button class="hero__indicator" aria-label="Slide 3"></button>
+            </div>
+        </section>
+
+        <div class="announcement">
+            <a href="#" class="announcement__link">
+                <div class="announcement__container">
+                    <div class="announcement__content">
+                        <span class="announcement__date">Před 12 dny</span>
+                        <span class="announcement__text">Jiří Štěpán z Etnetera Activate podhalil zákulisí vykutálené náborové kampaně.</span>
+                        <span class="announcement__action">Přečíst</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <section class="about">
+            <div class="about__container">
+                <h2 class="about__title">Co jsme zač</h2>
+                
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="images/budova@2x.jpg" alt="Budova Etnetera">
+                    </div>
+                    <div class="about__text">
+                        <p>V roce 1997 si Martin a Václav začali chybějící zdroje v práci s reklamním piánem, že mohou zaměstnat i své přátele, kteří celí jejich znalosti a smysl pro humor. Po 20 letech úspěšného fungování je <a href="https://etnetera.cz">Etnetera</a> <span class="about__highlight">přední společností v oblasti vývoje webových portálů a aplikací</span>. Naším cílem je pro klienty na českém trhu vytvořit správné a <span class="about__highlight">dlouhodobé partnerství a hledání jedinečných řešení s přidanou hodnotou, která vás posunou vpřed.</span> Naše sebedůvěra má své zázemí zejména v týmu odborníků z řade různých projektů pro klienty, kteří jsou špičkou v oboru. Držíme slovo i termíny, dokážeme přiznat a napravit chybu. Věříme sobě i vám.</p>
+                        <p>Pracujeme v liberálním a otevřeném prostředí bez kravatě a procesních příruček. Inspirujeme se principy svobodné firmy, kde se zisky dělí transparentně, týmy si vlastní pravidla a management nemá nadstandardní benefity. Rádi společně sportujeme a podporujeme se. Kopeme za jeden tým.</p>
+                        <p>Není proto náhoda, že jsme se <span class="tooltip" data-tooltip="hustý, co?">4 roky po sobě</span> umístili na třech nejvyšších příčkách v soutěži Best Employers ČR.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section class="blog">
-        <div class="blog__container">
-            <!-- First Column - Knowledge Sharing -->
-            <div class="blog__column">
-                <a href="#" class="blog__link">
-                    <div class="blog__content">
-                        <h3 class="blog__title">Sdílení vědomostí</h3>
-                        <div class="blog__text">
-                            <p>Inspirativní prostředí plné zajímavých lidí, které stojí za to poznat. Organizujeme pravidelně techtunche, kdy nad lahodnou pizzou sdílíme naše nové poznatky a vědomosti.</p>
+        <section class="attendance">
+            <div class="attendance__container">
+                <h3 class="attendance__title">Návštěvnost firmy</h3>
+                
+                <div class="attendance__chart" role="region" aria-label="Graf návštěvnosti firmy">
+                   
+                    <!-- Icons in left column -->
+                    <div class="attendance__icon attendance__icon--ampersand"><img src="images/etn-logo-graf.png" alt="Logo Etnetera"></div> 
+                    <div class="attendance__icon attendance__icon--clock"><img src="images/clock.svg" alt="Ikona hodin"></div>
+                
+                    <div class="attendance__chart-bars" role="group" aria-label="Sloupcový graf návštěvnosti">
+                        <!-- Graph bars with updated heights -->
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="8:00 - nízká návštěvnost, 15%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="9:00 - nízká návštěvnost, 20%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="10:00 - střední návštěvnost, 35%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 35%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="11:00 - střední návštěvnost, 40%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="12:00 - nízká návštěvnost, 25%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 25%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="13:00 - nízká návštěvnost, 20%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="14:00 - vysoká návštěvnost, 75%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 75%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="15:00 - vysoká návštěvnost, 85%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 85%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="16:00 - vysoká návštěvnost, 70%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 70%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="17:00 - střední návštěvnost, 45%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 45%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="18:00 - střední návštěvnost, 50%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 50%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="19:00 - nízká návštěvnost, 20%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="20:00 - nízká návštěvnost, 15%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="21:00 - střední návštěvnost, 40%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="22:00 - nízká návštěvnost, 50%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 50%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="23:00 - vysoká návštěvnost, 65%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 65%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="24:00 - vysoká návštěvnost, 75%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 75%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="25:00 - vysoká návštěvnost, 85%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 85%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="26:00 - vysoká návštěvnost, 70%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 70%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="27:00 - střední návštěvnost, 55%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 55%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="28:00 - střední návštěvnost, 45%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 45%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="29:00 - nízká návštěvnost, 30%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 30%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="30:00 - střední návštěvnost, 40%">
+                            <div class="attendance__bar attendance__bar--medium" style="height: 40%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="31:00 - vysoká návštěvnost, 65%">
+                            <div class="attendance__bar attendance__bar--high" style="height: 65%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="32:00 - nízká návštěvnost, 25%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 25%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="33:00 - nízká návštěvnost, 20%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 20%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="34:00 - nízká návštěvnost, 15%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="35:00 - nízká návštěvnost, 15%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
+                        </div>
+                        <div class="attendance__bar-container" role="graphics-symbol" aria-label="36:00 - nízká návštěvnost, 15%">
+                            <div class="attendance__bar attendance__bar--low" style="height: 15%;"></div>
                         </div>
                     </div>
-                    <div class="blog__footer">
-                        <div class="blog__date">11. LEDNA</div>
-                        <div class="blog__tag">#etnplesk</div>
+                    <div class="attendance__chart-labels" role="list" aria-label="Časové údaje">
+                        <!-- Time labels -->
+                        <div class="attendance__time-label" role="listitem">8:00</div>
+                        <div class="attendance__time-label" role="listitem">9:00</div>
+                        <div class="attendance__time-label" role="listitem">10:00</div>
+                        <div class="attendance__time-label" role="listitem">11:00</div>
+                        <div class="attendance__time-label" role="listitem">12:00</div>
+                        <div class="attendance__time-label" role="listitem">13:00</div>
+                        <div class="attendance__time-label" role="listitem">14:00</div>
+                        <div class="attendance__time-label" role="listitem">15:00</div>
+                        <div class="attendance__time-label" role="listitem">16:00</div>
+                        <div class="attendance__time-label" role="listitem">17:00</div>
+                        <div class="attendance__time-label" role="listitem">18:00</div>
+                        <div class="attendance__time-label" role="listitem">19:00</div>
+                        <div class="attendance__time-label" role="listitem">20:00</div>
+                        <div class="attendance__time-label" role="listitem">21:00</div>
+                        <div class="attendance__time-label" role="listitem">22:00</div>
                     </div>
-                </a>
-            </div>
-
-            <!-- Second Column - People Care -->
-            <div class="blog__column">
-                <a href="#" class="blog__link">
-                    <div class="blog__content">
-                        <h3 class="blog__title">O lidi se staráme někdy víc než o klienty</h3>
-                        <div class="blog__text">
-                            <p>Komfortní pracovní prostředí, které je unikátní! Kombinací kanceláří, kavárny, relaxační zóny a kavárny. U nás se strojně snadno odreagovat a nabíjené limečky takt nerosí.</p>
+                
+                    <div class="attendance__legend" role="list" aria-label="Vysvětlivky grafu">
+                        <div class="attendance__legend-item attendance__legend-item--low" role="listitem">
+                            <span class="attendance__legend-color" aria-hidden="true"></span>
+                            <span class="attendance__legend-text">bez fronty</span>
+                        </div>
+                        <div class="attendance__legend-item attendance__legend-item--medium" role="listitem">
+                            <span class="attendance__legend-color" aria-hidden="true"></span>
+                            <span class="attendance__legend-text">možnost fronty</span>
+                        </div>
+                        <div class="attendance__legend-item attendance__legend-item--high" role="listitem">
+                            <span class="attendance__legend-color" aria-hidden="true"></span>
+                            <span class="attendance__legend-text">pravděpodobné čekání ve frontě</span>
                         </div>
                     </div>
-                    <div class="blog__footer">
-                        <div class="blog__date">12. LEDNA</div>
-                        <div class="blog__tag">#etnplesk</div>
-                    </div>
-                </a>
+                </div>
             </div>
+        </section>
 
-            <!-- Third Column - Benefits -->
-            <div class="blog__column">
-                <a href="#" class="blog__link">
-                    <div class="blog__content">
-                        <h3 class="blog__title">Jaké u nás dostaneš benefity?</h3>
-                        <div class="blog__text">
-                            <p>Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a penzijní pojištění.</p>
-                        </div>
+        <!-- Job Requirements and Benefits Section (Two-column layout) -->
+        <section class="careers">
+            <div class="careers__container">
+                <!-- Left Column - Job Requirements -->
+                <div class="careers__column careers__column--requirements">
+                    <h2 class="careers__title">Chceš být naším partákem?</h2>
+                    <div class="careers__content">
+                        <div class="careers__subtitle">Měl(a) bys:</div>
+                        <ul class="careers__requirements-list">
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Znát HTML5, CSS3. Doslova. Tento jazyk Ti občas připadá přirozenější než čeština.</span>
+                            </li>
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Znát JavaScript.</span>
+                            </li>
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Nad pojmy ES6/7, React a Redux bys neměl bezradně krčit rameny, ale bezpečně je znát.</span>
+                            </li>
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Node.js je Tvůj dobrý kamarád, který používáš při buildování.</span>
+                            </li>
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Velkou výhodu představují dobré vztahy s dalšími JS frameworky. Tzn. pokud si tykáš třeba s Angular, Vue.js či Vanilla JS.</span>
+                            </li>
+                            <li class="careers__requirements-item">
+                                <span class="careers__requirements-text">Uvedené technologie Tě zajímají, ale nemáš s nimi moc zkušeností? Nevadí, stav se k nám na kafe.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="blog__footer">
-                        <div class="blog__date">13. LEDNA</div>
-                        <div class="blog__tag">#etnplesk</div>
+                </div>
+                
+                <!-- Right Column - Benefits -->
+                <div class="careers__column careers__column--benefits">
+                    <h2 class="careers__title">Co za to dostaneš?</h2>
+                    <div class="careers__content">
+                        <div class="careers__subtitle">Budeme si tě hýčkat např.:</div>
+                        <ol class="careers__benefits-list">
+                            <li class="careers__benefits-item">
+                                <div class="careers__benefits-text">
+                                    <p>Komfortním pracovním prostředím, které je unikátní! Kombinací kancelářské, diskotéky, odpočinkových prostor a kavárny. U nás se strašně snadno odreagujete a nabíjené limečky takt nerosí.</p>
+                                </div>
+                            </li>
+                            <li class="careers__benefits-item">
+                                <div class="careers__benefits-text">
+                                    <p>Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a další.</p>
+                                </div>
+                            </li>
+                            <li class="careers__benefits-item">
+                                <div class="careers__benefits-text">
+                                    <p>Možností pořádně si oddechnout. Nejen v našich relaxačních prostorech, ale třeba na pláži v exotice. Díky 5 týdnům placené dovolené.</p>
+                                </div>
+                            </li>
+                            <li class="careers__benefits-item">
+                                <div class="careers__benefits-text">
+                                    <p>Inspirativním prostředím plným zajímavých lidí, které stojí za to poznat. Organizujeme pravidelné techtunlche, kde nad lahodnou pizzou sdílíme naše nové poznatky a zkušenosti.</p>
+                                </div>
+                            </li>
+                            <li class="careers__benefits-item">
+                                <div class="careers__benefits-text">
+                                    <p>A hlavně... svobodou!! Budeme rádi, pokud s námi budeš v kanceláři, ale rozumíme tomu, že někdy budeš chtít pracovat i odjinud. Zároveň chápeme, že každému z nás vyhovuje jiná pracovní doba a zařízení, na kterém pracuje. Pojďme se domluvit.</p>
+                                </div>
+                            </li>
+                        </ol>
                     </div>
-                </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Blog Section -->
+        <section class="blog">
+            <div class="blog__container">
+                <!-- First Column - Knowledge Sharing -->
+                <div class="blog__column">
+                    <a href="#" class="blog__link">
+                        <div class="blog__content">
+                            <h3 class="blog__title">Sdílení vědomostí</h3>
+                            <div class="blog__text">
+                                <p>Inspirativní prostředí plné zajímavých lidí, které stojí za to poznat. Organizujeme pravidelně techtunche, kdy nad lahodnou pizzou sdílíme naše nové poznatky a vědomosti.</p>
+                            </div>
+                        </div>
+                        <div class="blog__footer">
+                            <div class="blog__date">11. LEDNA</div>
+                            <div class="blog__tag">#etnplesk</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Second Column - People Care -->
+                <div class="blog__column">
+                    <a href="#" class="blog__link">
+                        <div class="blog__content">
+                            <h3 class="blog__title">O lidi se staráme někdy víc než o klienty</h3>
+                            <div class="blog__text">
+                                <p>Komfortní pracovní prostředí, které je unikátní! Kombinací kanceláří, kavárny, relaxační zóny a kavárny. U nás se strojně snadno odreagovat a nabíjené limečky takt nerosí.</p>
+                            </div>
+                        </div>
+                        <div class="blog__footer">
+                            <div class="blog__date">12. LEDNA</div>
+                            <div class="blog__tag">#etnplesk</div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Third Column - Benefits -->
+                <div class="blog__column">
+                    <a href="#" class="blog__link">
+                        <div class="blog__content">
+                            <h3 class="blog__title">Jaké u nás dostaneš benefity?</h3>
+                            <div class="blog__text">
+                                <p>Pestrým koktejlem takových těch typických benefitů jako jsou třeba stravenková platební karta, Multisport karta, příspěvky na vzdělání, dopravu a penzijní pojištění.</p>
+                            </div>
+                        </div>
+                        <div class="blog__footer">
+                            <div class="blog__date">13. LEDNA</div>
+                            <div class="blog__tag">#etnplesk</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="footer__container">
-            <div class="footer__copyright"><a href="#">Copyright</a></div>
+            <div class="footer__copyright"><a href="/copyright" aria-label="Zobrazit informace o autorských právech">Copyright</a></div>
             <div class="footer__company">© 2019 ETNETERA</div>
-            <div class="footer__group">Jsme hrdým členem <a href="https://etnetera.cz" class="footer__link">Etnetera Group</a></div>
+            <div class="footer__group">Jsme hrdým členem <a href="https://etnetera.cz" class="footer__link" aria-label="Přejít na web Etnetera Group">Etnetera Group</a></div>
         </div>
-        <a href="#" class="newsletter-button">
-            <span class="newsletter-button__icon"></span>
-        </a>
+        <button class="newsletter-button" aria-label="Otevřít newsletter formulář">
+            <span class="newsletter-button__icon" aria-hidden="true"></span>
+        </button>
     </footer>
 
-    <div class="newsletter-popup" id="newsletter-popup">
+    <div class="newsletter-popup" id="newsletter-popup" role="dialog" aria-labelledby="newsletter-title" aria-hidden="true">
         <div class="newsletter-popup__content">
-            <button class="newsletter-popup__close" aria-label="Zavřít"><img src="images/close.svg" alt="Close"></button>
-            <h2 class="newsletter-popup__title">Dostávejte články přímo do vaší e-mailové schránky!</h2>
+            <button class="newsletter-popup__close" aria-label="Zavřít"><img src="images/close.svg" alt="Zavřít" aria-hidden="true"></button>
+            <h2 class="newsletter-popup__title" id="newsletter-title">Dostávejte články přímo do vaší e-mailové schránky!</h2>
             <form class="newsletter-popup__form">
                 <div class="newsletter-popup__input-group">
                     <label for="newsletter-email" class="newsletter-popup__label">Vaše e-mailová adresa</label>
-                    <input type="email" id="newsletter-email" class="newsletter-popup__input" required>
+                    <input type="email" id="newsletter-email" class="newsletter-popup__input" required aria-required="true">
                     <button type="submit" class="newsletter-popup__submit">Odeslat</button>
                 </div>
-                <div class="newsletter-popup__disclaimer">
-                    Podmínky zpracování osobních údajů („Podmínky“) poskytují informace
+                <div class="newsletter-popup__disclaimer" role="note">
+                    Podmínky zpracování osobních údajů („Podmínky") poskytují informace
                     o shromažďování, zaznamenávání, používání a jiného zpracování osobních údajů společnostní Etnetera a.s. se sídlem Jankovcova 1037/49, 170 00 Praha 7, IČO: 25103814, zapsána u MS Praha, sp. zn. B 11168, jakožto správcem osobních údajů.
                 </div>
             </form>
