@@ -1,7 +1,8 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use 'sass:color';
 
-.info-columns {
+.blog {
     padding: 4rem 0;
     background-color: $color-background;
 
@@ -18,50 +19,69 @@
 
     &__column {
         flex: 1 1 100%;
-        display: flex;
-        flex-direction: column;
-        background-color: $color-background-alt;
+        background-color: $color-white;
         border-radius: 4px;
         overflow: hidden;
         position: relative;
-        padding: 2rem;
         min-height: 350px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
 
         @media (min-width: $breakpoint-tablet) {
             flex: 1 1 0;
         }
 
-        &--dark {
+        &:hover {
             background-color: $color-black;
-            color: $color-white;
-
-            .info-columns__title,
-            .info-columns__text {
+            
+            .blog__title,
+            .blog__text {
                 color: $color-white;
             }
 
-            .info-columns__date,
-            .info-columns__tag {
-                color: rgba($color-white, 0.6);
+            .blog__date {
+                color: rgba($color-white, 0.7);
             }
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 3rem 2rem 1.4rem;
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            color: inherit;
         }
     }
 
     &__content {
         flex-grow: 1;
+        text-align: center;
     }
 
     &__title {
-        font-size: $font-size-h3;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
+        font-size: $font-size-h2;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
         color: $color-text;
+        text-align: center;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        transition: color 0.3s ease;
     }
 
     &__text {
         font-size: $font-size-base;
-        line-height: 1.6;
         color: $color-text;
+        text-align: center;
+        font-size: 1.25rem;
+        line-height: 1.4;
+        transition: color 0.3s ease;
 
         p {
             margin-bottom: 1rem;
@@ -72,31 +92,26 @@
         }
     }
 
-    &__date {
+    &__footer {
         margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__date {
         font-size: 0.75rem;
         color: $color-text-light;
         text-transform: uppercase;
         font-weight: 600;
+        transition: color 0.3s ease;
     }
 
     &__tag {
-        display: inline-block;
-        margin-top: 0.5rem;
-        padding: 0.25rem 0;
-        font-size: 0.75rem;
+        font-size: 0.875rem;
         color: $color-secondary;
         text-transform: lowercase;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 2rem;
-            height: 2px;
-            background-color: $color-secondary;
-        }
+        transition: color 0.3s ease;
+        font-weight: 700;
     }
 } 

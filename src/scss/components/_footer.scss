@@ -1,34 +1,39 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use 'sass:color';
 
 .footer {
-    padding: 2rem 0;
+    padding: 2rem 0 2.2rem;
     background-color: $color-background;
-    border-top: 1px solid rgba($color-text-light, 0.1);
     position: relative;
+    text-align: center;
 
     &__container {
         @include container;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        
-        @media (min-width: $breakpoint-tablet) {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+        gap: 0.1rem;
     }
 
     &__copyright {
-        font-size: 0.9rem;
+        font-size: 0.875rem;
         color: $color-text-light;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
     }
-
+    &__company {
+        color: $color-text;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+    
     &__group {
-        font-size: 0.9rem;
-        color: $color-text-light;
+        margin-top: 1.4rem;
+        font-size: 0.875rem;
+        color: $color-text;
     }
 
     &__link {
