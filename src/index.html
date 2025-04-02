@@ -386,11 +386,29 @@
             <div class="footer__company">© 2019 ETNETERA</div>
             <div class="footer__group">Jsme hrdým členem <a href="https://etnetera.cz" class="footer__link">Etnetera Group</a></div>
         </div>
-        <a href="#" class="chat-button">
-            <span class="chat-button__icon"></span>
+        <a href="#" class="newsletter-button">
+            <span class="newsletter-button__icon"></span>
         </a>
     </footer>
 
+    <div class="newsletter-popup" id="newsletter-popup">
+        <div class="newsletter-popup__content">
+            <button class="newsletter-popup__close" aria-label="Zavřít"><img src="images/close.svg" alt="Close"></button>
+            <h2 class="newsletter-popup__title">Dostávejte články přímo do vaší e-mailové schránky!</h2>
+            <form class="newsletter-popup__form">
+                <div class="newsletter-popup__input-group">
+                    <label for="newsletter-email" class="newsletter-popup__label">Vaše e-mailová adresa</label>
+                    <input type="email" id="newsletter-email" class="newsletter-popup__input" required>
+                    <button type="submit" class="newsletter-popup__submit">Odeslat</button>
+                </div>
+                <div class="newsletter-popup__disclaimer">
+                    Podmínky zpracování osobních údajů („Podmínky“) poskytují informace
+                    o shromažďování, zaznamenávání, používání a jiného zpracování osobních údajů společnostní Etnetera a.s. se sídlem Jankovcova 1037/49, 170 00 Praha 7, IČO: 25103814, zapsána u MS Praha, sp. zn. B 11168, jakožto správcem osobních údajů.
+                </div>
+            </form>
+        </div>
+    </div>
+
     <script src="js/main.js" type="module"></script>
 </body>
-</html> 
+</html>
