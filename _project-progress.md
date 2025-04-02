@@ -70,8 +70,8 @@
   - [x] Touch gestures for mobile
   - [x] Keyboard navigation support
   - [x] Autoplay vypnuto dle požadavku
-- [ ] Tooltip system
-- [ ] Form validation
+- [x] Tooltip system
+- [x] Form validation
 - [x] Mobile menu
 
 ## 5. SEO & Meta Data
@@ -80,17 +80,17 @@
   - [x] Add favicon.ico to root
   - [x] Add Apple touch icon
   - [x] Add manifest.json
-- [ ] Open Graph implementation
-  - [ ] Add og:title
-  - [ ] Add og:description
-  - [ ] Add og:image
-  - [ ] Add og:url
-  - [ ] Add og:type
-- [ ] Meta tags
-  - [ ] Add description
-  - [ ] Add keywords
-  - [ ] Add robots
-  - [ ] Add canonical URL
+- [x] Open Graph implementation
+  - [x] Add og:title
+  - [x] Add og:description
+  - [x] Add og:image
+  - [x] Add og:url
+  - [x] Add og:type
+- [x] Meta tags
+  - [x] Add description
+  - [x] Add keywords
+  - [x] Add robots
+  - [x] Add canonical URL
 
 ## 6. Optimization
 - [ ] Performance optimization
