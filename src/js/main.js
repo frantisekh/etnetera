@@ -2,7 +2,6 @@
 import { heroCarousel } from './carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('DOM loaded');
     
     // Mobile menu toggle functionality
     const mobileMenuToggle = document.querySelector('.header__mobile-toggle');
