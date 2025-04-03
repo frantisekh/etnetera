@@ -31,7 +31,7 @@
     <header class="header" role="banner">
         <div class="header__container">
             <div class="header__logo">
-                <a href="/" aria-label="Etnetera - Domovská stránka"><img src="images/etnetera-logo.png" alt="Etnetera logo"></a>
+                <a href="/" aria-label="Etnetera - Domovská stránka"><img src="images/etnetera-logo.webp" alt="Etnetera logo"></a>
             </div>
             
             <!-- Mobile menu button - only visible on mobile -->
@@ -58,7 +58,11 @@
         <section class="hero" aria-label="Hlavní prezentace">
             <div class="hero__slides" role="region" aria-label="Prezentační slider">
                 <!-- Slide 1 -->
-                <div id="hero-slide-1" class="hero__slide hero__slide--active" role="tabpanel" aria-labelledby="slide-heading-1">
+                <div id="hero-slide-1" class="hero__slide hero__slide--active" 
+                     data-image="images/hero-bg1.webp"
+                     data-image-retina="images/hero-bg1@2x.webp"
+                     role="tabpanel" 
+                     aria-labelledby="slide-heading-1">
                     <div class="hero__container">
                         <div class="hero__text-container">
                             <h1 id="slide-heading-1" class="hero__title">Přidej se v&nbsp;Etneteře mezi kodéry</h1>
@@ -71,7 +75,12 @@
                 </div>
                 
                 <!-- Slide 2 -->
-                <div id="hero-slide-2" class="hero__slide" role="tabpanel" aria-labelledby="slide-heading-2" aria-hidden="true">
+                <div id="hero-slide-2" class="hero__slide" 
+                     data-image="images/hero-bg2.webp"
+                     data-image-retina="images/hero-bg2@2x.webp"
+                     role="tabpanel" 
+                     aria-labelledby="slide-heading-2" 
+                     aria-hidden="true">
                     <div class="hero__container">
                         <div class="hero__text-container">
                             <h1 id="slide-heading-2" class="hero__title">Vývojáři s&nbsp;vášní pro web</h1>
@@ -84,7 +93,12 @@
                 </div>
                 
                 <!-- Slide 3 -->
-                <div id="hero-slide-3" class="hero__slide" role="tabpanel" aria-labelledby="slide-heading-3" aria-hidden="true">
+                <div id="hero-slide-3" class="hero__slide" 
+                     data-image="images/hero-bg3.webp"
+                     data-image-retina="images/hero-bg3@2x.webp"
+                     role="tabpanel" 
+                     aria-labelledby="slide-heading-3" 
+                     aria-hidden="true">
                     <div class="hero__container">
                         <div class="hero__text-container">
                             <h1 id="slide-heading-3" class="hero__title">Staň se&nbsp;součástí našeho týmu</h1>
@@ -130,7 +144,10 @@
                 
                 <div class="about__content">
                     <div class="about__image">
-                        <img src="images/budova@2x.jpg" alt="Budova Etnetera" loading="lazy">
+                        <img src="images/budova.webp" 
+                             srcset="images/budova.webp 1x, images/budova@2x.webp 2x"
+                             alt="Budova Etnetera" 
+                             loading="lazy">
                     </div>
                     <div class="about__text">
                         <p>V roce 1997 si Martin a Václav začali chybějící zdroje v práci s reklamním piánem, že mohou zaměstnat i své přátele, kteří celí jejich znalosti a smysl pro humor. Po 20 letech úspěšného fungování je <a href="https://etnetera.cz">Etnetera</a> <span class="about__highlight">přední společností v oblasti vývoje webových portálů a aplikací</span>. Naším cílem je pro klienty na českém trhu vytvořit správné a <span class="about__highlight">dlouhodobé partnerství a hledání jedinečných řešení s přidanou hodnotou, která vás posunou vpřed.</span> Naše sebedůvěra má své zázemí zejména v týmu odborníků z řade různých projektů pro klienty, kteří jsou špičkou v oboru. Držíme slovo i termíny, dokážeme přiznat a napravit chybu. Věříme sobě i vám.</p>
@@ -148,7 +165,7 @@
                 <div class="attendance__chart" role="region" aria-label="Graf návštěvnosti firmy">
                    
                     <!-- Icons in left column -->
-                    <div class="attendance__icon attendance__icon--ampersand"><img src="images/etn-logo-graf.png" alt="Logo Etnetera"></div> 
+                    <div class="attendance__icon attendance__icon--ampersand"><img src="images/etn-logo-graf.webp" alt="Logo Etnetera"></div> 
                     <div class="attendance__icon attendance__icon--clock"><img src="images/clock.svg" alt="Ikona hodin"></div>
                 
                     <div class="attendance__chart-bars" role="group" aria-label="Sloupcový graf návštěvnosti">

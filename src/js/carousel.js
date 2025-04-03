@@ -28,6 +28,9 @@ export const heroCarousel = {
         // Exit if there are no slides
         if (this.slidesCount <= 1) return;
         
+        // Initialize slide backgrounds
+        this.initializeSlideBackgrounds();
+        
         // Set up event listeners
         this.prevButton.addEventListener('click', () => this.goToPrevSlide());
         this.nextButton.addEventListener('click', () => this.goToNextSlide());
@@ -45,6 +48,44 @@ export const heroCarousel = {
         
         // Add swipe functionality for mobile
         this.setupSwipe();
+        
+        // Start autoplay if enabled
+        if (this.autoplayDelay > 0) {
+            this.startAutoplay();
+        }
+    },
+    
+    /**
+     * Initialize background images for all slides
+     */
+    initializeSlideBackgrounds() {
+        this.slides.forEach(slide => {
+            const image = slide.dataset.image;
+            const imageRetina = slide.dataset.imageRetina;
+            
+            if (image) {
+                slide.style.backgroundImage = `url(${image})`;
+            }
+            
+            if (imageRetina) {
+                // Create a style element for the ::after pseudo-element
+                const styleId = `style-${slide.id}`;
+                let styleEl = document.getElementById(styleId);
+                
+                if (!styleEl) {
+                    styleEl = document.createElement('style');
+                    styleEl.id = styleId;
+                    document.head.appendChild(styleEl);
+                }
+                
+                // Add style for the ::after pseudo-element
+                styleEl.textContent = `
+                    #${slide.id}::after {
+                        background-image: url(${imageRetina});
+                    }
+                `;
+            }
+        });
     },
     
     /**
